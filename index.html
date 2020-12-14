@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HACKTIV8 WORKSHOP FINAL PROJECTS BACTH 036</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px;
+    background-color: white;
+    background-image: url("images/banner.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0px;
+    margin-right: 10px;
+    background-attachment: fixed;
+  }
+
+  ul.header {
+    list-style-type: none;
+    font-size: large;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding-bottom: 0.5cm;
+  }
+
+  li.header {
+    float: right;
+    margin-left: 0.5cm;
+  }
+
+  li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 45px 40px;
+    text-decoration: none;
+  }
+
+  .logo {
+    float: left;
+    margin-top: 0.5cm;
+    background-color: white;
+  }
+
+  li a:hover {
+    background-color: rgb(255, 128, 55);
+    color: black;
+  }
+
+  li.header.active {
+    background-color: rgb(255, 128, 55);
+  }
+
+  .blog2:hover {
+    background-color: rgb(220, 238, 245);
+    /* text-decoration-color: rgb(220, 238, 245); */
+    color: black;
+  }
+
+  /* ourwork */
+  .row>.column {
+    padding: 0 8px;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .column {
+    float: left;
+    width: 25%;
+  }
+
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* background-color: black; */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+  }
+
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .mySlide {
+    display: none;
+    background-color: black;
+  }
+
+  .cursor {
+    cursor: pointer;
+  }
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    background-color: #f07e51;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: yellow;
+  }
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  img {
+    margin-bottom: -4px;
+  }
+
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
+
+  .demo {
+    opacity: 0.6;
+  }
+
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  /* slide our clients */
+  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: #666;
+  }
+
+  a:hover {
+    color: #c1b61b;
+  }
+
+  .mySlide1 {
+    display: none;
+  }
+</style>
+
+
+<body>
+  <div class="w3-display-container w3-white">
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt=""></a>
+      <br><br><br><br>
+    </div>
+
+    <ul class="header">
+      <li class="header"><a href="todos.html">TODOS</a></li>
+      <li class="header"><a href="contact1.html">CONTACT</a></li>
+      <li class="header"><a href="about.html">ABOUT US</a></li>
+      <li class="header"><a href="blog.html">BLOG</a></li>
+      <li class="header"><a href="portofolio.html">PORTOFOLIO</a></li>
+      <li class="header active"><a href="index.html">HOME</a></li>
+      <br>
+    </ul>
+  </div>
+  <br>
+
+
+  <!-- Header with Slideshow -->
+
+  <header class="w3-display-container w3-center">
+    <button class="w3-button w3-block w3-green w3-hide-large w3-hide-medium"
+      onclick="document.getElementById('download').style.display='block'">Download </button>
+
+    <div class="mySlides w3-animate-opacity" style="font-family:Georgia, 'Times New Roman', Times, serif;">
+      <div><img class="w3-image" src="images/banner-left.png" alt="Image 1" style="min-width:500px; margin-left: 40%;"
+          width="550" height="350"></div>
+
+      <div class="w3-display-topleft w3-hide-small" style="width:35%; margin-left: 15%;">
+        <div class="w3-yellow w3-opacity w3-hover-opacity-off w3-padding-middle w3-large">
+          <p class="w3-xxxlarge">WE BELIEVE</p>
+          <p class="w3-xxlarge"> IN QUALITY DESIGN</p>
+          <div class="w3-xlarge w3-black">
+            <p> Any Creative Project is Unique</p>
+            <p> and should be provided with</p>
+            <p> the appropriate quality</p>
+          </div>
+          <hr class="w3-opacity">
+        </div>
+      </div>
+      <div class="w3-display-topleft w3-padding w3-hide-small w3-border-bottom-yellow" style="width:15%">
+        <div class="w3-black w3-opacity w3-hover-opacity-off w3-padding-middle w3-large">
+          <p><button class="w3-button w3-block w3-black w3-hover-yellow w3-bottombar w3-border-yellow "
+              onclick="document.getElementById('download').style.display='block'">Order Now </button></p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="mySlides w3-animate-opacity" style="font-family:Georgia, 'Times New Roman', Times, serif;">
+      <div><img class="w3-image" src="images/banner-left.png" alt="Image 2" style="min-width:500px; margin-left: -30%;"
+          width="550" height="350"></div>
+
+      <div class="w3-display-topleft w3-padding w3-hide-small" style="width:35%; margin-left: 55%; ">
+        <div class="w3-yellow w3-opacity w3-hover-opacity-off w3-padding-middle w3-large">
+          <p class="w3-xxxlarge">WE BELIEVE</p>
+          <p class="w3-xxlarge"> IN QUALITY DESIGN</p>
+          <div class="w3-xlarge w3-black">
+            <p> Any Creative Project is Unique</p>
+            <p> and should be provided with</p>
+            <p> the appropriate quality</p>
+          </div>
+          <hr class="w3-opacity">
+        </div>
+      </div>
+      <div class="w3-display-bottomleft w3-padding w3-hide-small w3-border-bottom-yellow" style="width:15%">
+        <div class="w3-black w3-opacity w3-hover-opacity-off w3-padding-middle w3-large">
+          <p><button class="w3-button w3-block w3-black w3-hover-yellow w3-bottombar w3-border-yellow "
+              onclick="document.getElementById('download').style.display='block'">Order Now </button></p>
+        </div>
+      </div>
+    </div>
+    <div class="mySlides w3-animate-opacity" style="font-family:Georgia, 'Times New Roman', Times, serif;">
+      <div><img class="w3-image" src="images/banner-left.png" alt="Image 3" style="min-width:500px; margin-left: -40%;"
+          width="550" height="350"></div>
+
+      <div class="w3-display-right w3-padding w3-hide-small" style="width:35%; margin-right: 15%;">
+        <div class="w3-yellow w3-opacity w3-hover-opacity-off w3-padding-middle w3-large">
+          <p class="w3-xxxlarge">WE BELIEVE</p>
+          <p class="w3-xxlarge"> IN QUALITY DESIGN</p>
+          <div class="w3-xlarge w3-black">
+            <p> Any Creative Project is Unique</p>
+            <p> and should be provided with</p>
+            <p> the appropriate quality</p>
+          </div>
+          <hr class="w3-opacity">
+        </div>
+      </div>
+      <div class="w3-display-bottomright w3-padding w3-hide-small w3-border-bottom-yellow" style="width:15%">
+        <div class="w3-black w3-opacity w3-hover-opacity-off w3-padding-middle w3-large">
+          <p><button class="w3-button w3-block w3-black w3-hover-yellow w3-bottombar w3-border-yellow "
+              onclick="document.getElementById('download').style.display='block'">Order Now </button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="mySlides w3-animate-opacity" style="font-family:Georgia, 'Times New Roman', Times, serif;">
+      <div><img class="w3-image" src="images/banner-left.png" alt="Image 4" style="min-width:500px; margin-left: 40%;"
+          width="550" height="350"></div>
+
+      <div class="w3-display-topleft w3-hide-small" style="width:35%; margin-left: 15%;">
+        <div class="w3-yellow w3-opacity w3-hover-opacity-off w3-padding-middle w3-large">
+          <p class="w3-xxxlarge">WE BELIEVE</p>
+          <p class="w3-xxlarge"> IN QUALITY DESIGN</p>
+          <div class="w3-xlarge w3-black">
+            <p> Any Creative Project is Unique</p>
+            <p> and should be provided with</p>
+            <p> the appropriate quality</p>
+          </div>
+          <hr class="w3-opacity">
+        </div>
+      </div>
+      <div class="w3-display-topright w3-padding w3-hide-small w3-border-bottom-yellow" style="width:15%">
+        <div class="w3-black w3-opacity w3-hover-opacity-off w3-padding-middle w3-large">
+          <p><button class="w3-button w3-block w3-black w3-hover-yellow w3-bottombar w3-border-yellow "
+              onclick="document.getElementById('download').style.display='block'">Order Now </button></p>
+        </div>
+      </div>
+    </div>
+
+
+    <a class="w3-button w3-black w3-display-right w3-margin-right w3-round w3-hide-small w3-hover-yellow"
+      onclick="plusDivs(1)">Next <i class="fa fa-angle-right"></i></a>
+    <a class="w3-button w3-block w3-black w3-hide-large w3-hide-medium" onclick="plusDivs(1)">Next <i
+        class="fa fa-angle-right"></i></a>
+    <a class="w3-button w3-black w3-display-left w3-margin-left w3-round w3-hide-small w3-hover-yellow"
+      onclick="plusDivs(1)">PREVIOUS <i class="fa fa-angle-left"></i></a>
+    <a class="w3-button w3-block w3-black w3-hide-large w3-hide-medium" onclick="plusDivs(1)">PREVIOUS <i
+        class="fa fa-angle-left"></i></a>
+  </header>
+
+  <!-- Order Now -->
+  <div id="download" class="w3-modal w3-animate-opacity" style="background-color: black;">
+    <div class="w3-modal-content" style="padding:32px">
+      <div class="w3-container w3-white">
+        <i onclick="document.getElementById('download').style.display='none'"
+          class="fa fa-remove w3-xlarge w3-button w3-transparent w3-left w3-xlarge"></i>
+        <h2 class="w3-wide"></h2>
+        <p>
+          <div class="w3-row-padding" style="margin:0 -10px;">
+            <div class="w3-third w3-margin-bottom">
+              <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off" style=" width: 100%;">
+                <li class="w3-yellow w3-xlarge w3-padding-32"><b>Plan Features</b>
+                  <h6></h6>
+                </li>
+                <li class="w3-padding-16">Web Space</li>
+                <li class="w3-padding-16">Bandwidth</li>
+                <li class="w3-padding-16">25GB Storage</li>
+                <li class="w3-padding-16">Iphoe App</li>
+                <li class="w3-padding-16">Enhanced Security</li>
+                <li class="w3-padding-16">E-mail</li>
+                <li class="w3-padding-16">Wordpress Support</li>
+                <li class="w3-padding-16">24/7 Support</li>
+                <li class="w3-padding-16">Backups</li>
+                <li class="w3-padding-16">Dedicated IP</li>
+              </ul>
+            </div>
+
+            <div class="w3-third w3-margin-bottom">
+              <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off" style=" width: 100%;">
+                <li class="w3-yellow w3-xlarge w3-padding-16"><b>Basic</b>
+                  <h6>$5/month</h6>
+                </li>
+                <li class="w3-padding-16">Unlimited</li>
+                <li class="w3-padding-16">Unlimited</li>
+                <li class="w3-padding-16"><img src="images/icon-remove.png"></li>
+                <li class="w3-padding-16"><img src="images/icon-remove.png"></li>
+                <li class="w3-padding-16"><img src="images/tickmark-icon.png"></li>
+                <li class="w3-padding-16"><img src="images/tickmark-icon.png"></li>
+                <li class="w3-padding-16"><img src="images/icon-remove.png"></li>
+                <li class="w3-padding-16"><img src="images/tickmark-icon.png"></li>
+                <li class="w3-padding-16"><img src="images/tickmark-icon.png"></li>
+                <li class="w3-padding-16">$ 2/mo</li>
+                <li class="w3-light-grey w3-padding-24">
+                  <button class="w3-button w3-yellow w3-padding-large w3-hover-black">Order Now</button>
+                </li>
+              </ul>
+            </div>
+
+            <div class="w3-third w3-margin-bottom">
+              <ul class="w3-ul w3-center w3-border w3-white w3-opacity w3-hover-opacity-off" style=" width: 100%;">
+                <li class="w3-yellow w3-xlarge w3-padding-16 w3-margin-left"><b>Economy</b>
+                  <h6>$9/month</h6>
+                </li>
+                <li class="w3-padding-16">Unlimited</li>
+                <li class="w3-padding-16">Unlimited</li>
+                <li class="w3-padding-16">Unlimited</li>
+                <li class="w3-padding-16">Unlimited</li>
+                <li class="w3-padding-16"><img src="images/tickmark-icon.png"></li>
+                <li class="w3-padding-16"><img src="images/tickmark-icon.png"></li>
+                <li class="w3-padding-16"><img src="images/tickmark-icon.png"></li>
+                <li class="w3-padding-16"><img src="images/tickmark-icon.png"></li>
+                <li class="w3-padding-16"><img src="images/tickmark-icon.png"></li>
+                <li class="w3-padding-16">$ 2/mo</li>
+                <li class="w3-light-grey w3-padding-24">
+                  <button class="w3-button w3-yellow w3-padding-large w3-hover-black">Order Now</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </p>
+      </div>
+      <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" style="width: 20%;"
+        onclick="document.getElementById('download').style.display='none'">Exit</button>
+    </div>
+  </div>
+  </div>
+  <!-- blog2 -->
+  <div class="w3-container w3-white">
+
+    <h2 class="w3-xxxlarge w3-center" style="font-family: 'Times New Roman', Times, serif;"><b>WE CREATIVE QUALITY
+        DESIGNS.</b></h2>
+    <h1 class="w3-xlarge w3-center" style="font-family: 'Times New Roman', Times, serif;"><b>We Specialize in Web
+        Design / Development and Graphic Design</b></h1>
+    <br>
+    <div class="w3-cell-row " style="cursor: pointer;">
+      <div class="w3-container w3-white w3-cell w3-cell-top">
+        <div class="w3-card-4 w3-dark-gray w3-hover-black" style="width:300px">
+          <img src="images/pic.jpg" alt="pic" style="width:100%">
+          <div class="w3-container w3-center">
+            <h2 style="text-align:left; line-height: 1.2cm ;">REDESIGNING
+              WITH PERSONALITY</h2>
+            <h6 style="text-align:right; line-height: 0.8cm ;">in <a style="color:yellow">web design</a></h6>
+          </div>
+        </div>
+        <br>
+      </div>
+      <div class="w3-container w3-white w3-cell w3-cell-top">
+        <div class="w3-card-4 w3-dark-gray w3-hover-black" style="width:300px">
+          <div class="blog2"><img class="blog2" src="images/icon1.png" alt="icon1" style="width:100%; background-color: yellow;">
+          <h3 style="text-align: center;">WEB DEVELOPMENT</h3></img></div>
+
+          <div class="w3-container w3-center">
+            <h6 style="line-height: 1cm ;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+              nibh euismod</a></h6>
+          </div>
+        </div>
+      </div>
+      <div class="w3-container w3-white w3-cell w3-cell-top">
+        <div class="w3-card-4 w3-dark-gray w3-hover-black" style="width:300px">
+          <div class="blog2"><img src="images/icon2.png" alt="icon2" style="width:100%; background-color: yellow;">
+          <h2 style="text-align: center;">WEB DESIGN</h2></img></div>
+
+          <div class="w3-container w3-center">
+            <h6 style="line-height: 0.9cm ;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+              nibh euismod</a></h6>
+          </div>
+        </div>
+      </div>
+      <div class="w3-container w3-white w3-cell w3-cell-top">
+        <div class="w3-card-4 w3-dark-gray w3-hover-black" style="width:300px">
+          <div class="blog2"><img class="blog2" src="images/icon3.png" alt="icon3" style="width:100%; background-color: yellow;">
+          <h2 style="text-align: center;">GRAPHIC DESIGN</h2></img></div>
+
+          <div class="w3-container w3-center">
+            <h6 style="line-height: 0.9cm ;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+              nibh euismod</a></h6>
+          </div>
+        </div>
+        <br>
+      </div>
+    </div>
+    <br>
+  </div>
+
+  <div class="w3-container w3-white">
+    <h2 style="color:yellow; background-color: black; text-align: center; padding: 5px; padding-bottom: 5px; box-sizing: content-box;
+      width: 200px; height: 30px; margin-Left: 550px; border-bottom: black 10px solid;
+      cursor: pointer;">OUR WORK</h2><br>
+    <h4 style="text-align: center;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+      euismod</h4><br>
+    <div class="row">
+      <div class="column">
+        <img src="images/pic1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+        <img src="images/pic2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+        <img src="images/pic3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="images/pic4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+        <img src="images/pic5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+        <img src="images/pic6.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="images/pic7.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+        <img src="images/pic8.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+        <img src="images/pic9.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+      </div>
+      <div class="column">
+        <img src="images/pic10.jpg" style="width:100%" onclick="openModal();currentSlide(10)"
+          class="hover-shadow cursor">
+        <img src="images/pic11.jpg" style="width:100%" onclick="openModal();currentSlide(11)"
+          class="hover-shadow cursor">
+        <img src="images/pic12.jpg" style="width:100%" onclick="openModal();currentSlide(12)"
+          class="hover-shadow cursor">
+      </div>
+    </div>
+    <br><br>
+  </div>
+
+  <div id="myModal" class="modal" style="background-color: black;">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+      <div class="mySlide">
+        <div class="numbertext">1 / 12</div>
+        <img src="images/pic1.jpg" style="width:300px; height: 300px; margin-left: 450px;">
+      </div>
+
+      <div class="mySlide">
+        <div class="numbertext">2 / 12</div>
+        <img src="images/pic2.jpg" style="width:300px; height: 300px; margin-left: 450px;">
+      </div>
+
+      <div class="mySlide">
+        <div class="numbertext">3 / 12</div>
+        <img src="images/pic3.jpg" style="width:300px; height: 300px; margin-left: 450px;">
+      </div>
+
+      <div class="mySlide">
+        <div class="numbertext">4 / 12</div>
+        <img src="images/pic4.jpg" style="width:300px; height: 300px; margin-left: 450px;">
+      </div>
+
+      <div class="mySlide">
+        <div class="numbertext">5 / 12</div>
+        <img src="images/pic5.jpg" style="width:300px; height: 300px; margin-left: 450px;">
+      </div>
+
+      <div class="mySlide">
+        <div class="numbertext">6 / 12</div>
+        <img src="images/pic6.jpg" style="width:300px; height: 300px; margin-left: 450px;">
+      </div>
+
+      <div class="mySlide">
+        <div class="numbertext">7 / 12</div>
+        <img src="images/pic7.jpg" style="width:300px; height: 300px; margin-left: 450px;">
+      </div>
+
+      <div class="mySlide">
+        <div class="numbertext">8 / 12</div>
+        <img src="images/pic8.jpg" style="width:300px; height: 300px; margin-left: 450px;">
+      </div>
+      <div class="mySlide">
+        <div class="numbertext">9 / 12</div>
+        <img src="images/pic9.jpg" style="width:300px; height: 300px; margin-left: 450px;">
+      </div>
+
+      <div class="mySlide">
+        <div class="numbertext">10 / 12</div>
+        <img src="images/pic10.jpg" style="width:300px; height: 300px; margin-left: 450px;">
+      </div>
+
+      <div class="mySlide">
+        <div class="numbertext">11 / 12</div>
+        <img src="images/pic11.jpg" style="width:300px; height: 300px; margin-left: 450px;">
+      </div>
+
+      <div class="mySlide">
+        <div class="numbertext">12 / 12</div>
+        <img src="images/pic12.jpg" style="width:300px; height: 300px; margin-left: 450px;">
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+
+
+      <div class="column">
+        <img class="demo cursor" src="images/pic1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Our Work 1">
+        <img class="demo cursor" src="images/pic2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Our Work 2">
+        <img class="demo cursor" src="images/pic3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Our Work 3">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/pic4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Our Work 4">
+        <img class="demo cursor" src="images/pic5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Our Work 5">
+        <img class="demo cursor" src="images/pic6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Our Work 6">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/pic7.jpg" style="width:100%" onclick="currentSlide(7)" alt="Our Work 7">
+        <img class="demo cursor" src="images/pic8.jpg" style="width:100%" onclick="currentSlide(8)" alt="Our Work 8">
+        <img class="demo cursor" src="images/pic9.jpg" style="width:100%" onclick="currentSlide(9)" alt="Our Work 9">
+      </div>
+      <div class="column">
+        <img class="demo cursor" src="images/pic10.jpg" style="width:100%" onclick="currentSlide(10)" alt="Our Work 10">
+        <img class="demo cursor" src="images/pic11.jpg" style="width:100%" onclick="currentSlide(11)" alt="Our Work 11">
+        <img class="demo cursor" src="images/pic12.jpg" style="width:100%" onclick="currentSlide(12)" alt="Our Work 12">
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container w3-white">
+    <h2 style="color:yellow; background-color: black; text-align: center; padding: 5px; padding-bottom: 5px; box-sizing: content-box;
+        width: 220px; height: 30px; margin-Left: 550px; border-bottom: black 10px solid;
+        cursor: pointer;">OUR CLIENTS</h2><br>
+    <h4 style="text-align: center;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+      euismod</h4><br>
+
+    <div class="w3-content w3-section" style="max-width:500px">
+      <a href="https://www.bbc.com/"><img class="mySlide1 w3-animate-right" src="images/client1.jpg"
+          style="width:100%"></a>
+      <a href="https://www.virgin.com/"><img class="mySlide1 w3-animate-right" src="images/client2.jpg"
+          style="width:100%"></a>
+      <a href="https://www.nokia.com/"><img class="mySlide1 w3-animate-right" src="images/client3.jpg"
+          style="width:100%"></a>
+      <a href="https://www.apple.com/"><img class="mySlide1 w3-animate-right" src="images/client4.jpg"
+          style="width:100%"></a>
+      <a href="https://www.ford.com/"><img class="mySlide1 w3-animate-right" src="images/client5.jpg"
+          style="width:100%"></a>
+      <a href="https://www.vw.com/"><img class="mySlide1 w3-animate-right" src="images/client6.jpg"
+          style="width:100%"></a>
+      <a href="#"><img class="mySlide1 w3-animate-right" src="images/client7.jpg" style="width:100%"></a>
+      <a href="#"><img class="mySlide1 w3-animate-right" src="images/client8.jpg" style="width:100%"></a>
+
+    </div>
+
+    <!-- footer -->
+    <div class="w3-cell-row">
+      <div class="w3-container w3-dark-gray w3-cell w3-cell-top">
+        <h4 style="color:rgb(255, 255, 251)"><b>About Us</b></h4><br>
+        <p style="color:rgb(255, 255, 251)">Lorem ipsum dolor sit amet. consectetur adipisicing elit, sed do. eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+          essecillum dolore eu fugiat nulla pariatur.</p>
+        <h4 style="color:rgb(250, 250, 246); background-color: black; padding: 5px; padding-left: 10px; box-sizing: content-box;
+      width: 110px; height: 30px; margin-Left: 1px; border-bottom: yellow 3px solid; font-family: Arial Narrow;
+      cursor: pointer;"><b>Learn more</b></h4><br>
+        <h4 style="color:rgb(255, 255, 251)"><b>Photo Stream</b></h4><br>
+        <img src="images/g1.jpg" width="120" height="60">
+        <img src="images/g2.jpg" width="120" height="60">
+        <img src="images/g3.jpg" width="120" height="60"><br>
+        <img src="images/g4.jpg" width="120" height="60">
+        <img src="images/g5.jpg" width="120" height="60">
+        <img src="images/g6.jpg" width="120" height="60">
+      </div>
+
+      <div class="w3-container w3-dark-grey w3-cell w3-cell-top">
+        <h4 style="color:rgb(255, 255, 251)"><b>Latest tweets</b></h4><br>
+        <img src="images/tw.png" width="40" height="40" style="float: left;">
+        <h7 style="color:white">Lorem ipsum <b style="color: yellow">consectetuer</b> adipiscing elit, seddia
+          <b style="color: yellow">web design</b></h7><br>
+        <img src="images/tw.png" width="40" height="40" style="float: left;">
+        <h7 style="color:white">Lorem ipsum <b style="color: yellow">consectetuer</b> adipiscing elit, seddia
+          <b style="color: yellow">web design</b></h7><br>
+        <img src="images/tw.png" width="40" height="40" style="float: left;">
+        <h7 style="color:white">Lorem ipsum dolor sit amet <b style="color: yellow">consectetuer</b> adipiscing elit,
+          sed diam nonummy nibh
+          <b style="color: yellow">web design</b></h7><br>
+        <img src="images/tw.png" width="40" height="40" style="float: left;">
+        <h7 style="color:white">Lorem ipsum dolor sit amet <b style="color: yellow">consectetuer</b> adipiscing elit,
+          sed diam nonummy nibh
+          <b style="color: yellow">web design</b></h7><br>
+        <img src="images/tw.png" width="40" height="40" style="float: left;">
+        <h7 style="color:white">Lorem ipsum <b style="color: yellow">consectetuer</b> adipiscing elit, seddia
+          <b style="color: yellow">web design</b></h7><br>
+        <img src="images/tw.png" width="40" height="40" style="float: left;">
+        <h7 style="color:white">Lorem ipsum <b style="color: yellow">consectetuer</b> adipiscing elit, seddia
+          <b style="color: yellow">web design</b></h7><br>
+
+        <h4 style="color:rgb(255, 255, 251)"><b>Social Connecting</b></h4><br>
+
+
+        <a class="custom" href="blog.html"><img src='images/f.png' onmouseover="this.src='images/fC.png';"
+            onmouseout="this.src='images/f.png';" />
+          <img src='images/g.png' onmouseover="this.src='images/gC.png';" onmouseout="this.src='images/g.png';" />
+          <img src='images/t.png' onmouseover="this.src='images/tC.png';" onmouseout="this.src='images/t.png';" />
+          <img src='images/i.png' onmouseover="this.src='images/iC.png';" onmouseout="this.src='images/i.png';" />
+          <img src='images/Utub BW.png' onmouseover="this.src='images/UtubC.png';"
+            onmouseout="this.src='images/Utub BW.png';" />
+          <img src='images/Blog BW.png' onmouseover="this.src='images/Blog C.png';"
+            onmouseout="this.src='images/Blog BW.png';" />
+          <img src='images/wifi BW.png' onmouseover="this.src='images/wifiC.png';"
+            onmouseout="this.src='images/wifi BW.png';" />
+          <img src='images/dunia BW.png' onmouseover="this.src='images/DuniaC.png';"
+            onmouseout="this.src='images/dunia BW.png';" />
+        </a>
+
+        <h4 style="color:rgb(250, 250, 246); background-color: none; box-sizing: content-box; width: 400px; height: 30px; margin-Left: 1px;
+      border-bottom: yellow 3px solid; cursor: pointer;"></h4><br>
+      </div>
+
+      <div class="w3-container w3-dark-grey w3-cell w3-cell-top">
+        <h4 style="color:rgb(255, 255, 251);"><b>Contact info</b></h4><br>
+        <img src="images/address.png" width="40" height="40" style="float: left;">
+        <h6 style="color:white; margin-left: 50px;">Lorem ipsum dolor sit amet,consectetuer adipiscing elit, sed diam
+          nonummy nibh
+          web design</b></h6><br>
+        <img src="images/phone.png" width="40" height="40" style="float: left;">
+        <h6 style="color:white;  margin-left: 50px;">Phone : +1 800 258 2689</b></h6>
+        <h6 style="color:white;  margin-left: 110px;"> +1 800 258 2689</b></h6><br>
+        <img src="images/msg.png" width="40" height="40" style="float: left;">
+        <h6><a href="about.html" style="color:white; text-decoration: none; margin-left: 10px;">Email: <b style="color: yellow; cursor:
+            pointer;">gsetyobudi@gmail.com</b> </a></h6><br>
+
+        <h4 style="color:rgb(255, 255, 251)"><b>Follow Us</b></h4>
+        <h7 style="color:white">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+          euismod</b></h7><br>
+        <img src="images/msg.png" width="40" height="40" style="float: right;">
+        <h6 style="background-color: none; box-sizing: content-box; width: 450px; height: 30px; margin-Left: 1px;
+      border-bottom: yellow 3px solid; cursor: pointer;"></h6>
+      </div>
+    </div>
+
+    <div class="w3-container w3-black w3-cell w3-cell-middle" style="width: 700px; height:70px;">
+      <p> © 2020 <a href="index.html" style="color:yellow; text-decoration: none; margin-top: 25px;">HACKTIV8 WORKSHOP
+          FINAL PROJECTS</a>
+    </div>
+    <div class="w3-container w3-black w3-cell w3-cell-middle" style="width: 700px; height: 70px;">
+      <p style="text-align: right; margin-right: 30px;">
+        <a href="index.html" style="text-decoration: none; margin-left: 0.5cm;">HOME</a>
+        <a href="portofolio.html" style="text-decoration: none;  margin-left: 0.5cm;">PORTOFOLIO</a>
+        <a href="blog.html" style="text-decoration: none;  margin-left: 0.5cm;">BLOG</a>
+        <a href="about.html" style="text-decoration: none; margin-left: 0.5cm;">ABOUT US</a>
+        <a href="contact1.html" style="text-decoration: none;  margin-left: 0.5cm;">CONTACT</a>
+        <a href="todos.html" style="text-decoration: none;  margin-left: 0.5cm;">TODOS</a>
+      </p>
+      </p>
+    </div>
+  </div>
+  <br>
+
+
+  <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = x.length
+      }
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x[slideIndex - 1].style.display = "block";
+    }
+
+
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlide");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+
+
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlide1");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {
+        myIndex = 1
+      }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 2500);
+    }
+  </script>
+  <!-- <script src="script.js"></script> -->
+
+</body>
+
+</html>

@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HACKTIV8 WORKSHOP FINAL PROJECTS BACTH 036</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    background-color: white;
+    background-image: url("images/banner.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0px;
+    margin-right: 0px;
+    background-attachment: fixed;
+  }
+
+  ul.header {
+    list-style-type: none;
+    font-size: large;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding-bottom: 0.5cm;
+  }
+
+  li.header {
+    float: right;
+    margin-left: 0.5cm;
+  }
+
+  li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 45px 40px;
+    text-decoration: none;
+  }
+
+  .logo {
+    float: left;
+    margin-top: 0.5cm;
+    background-color: white;
+  }
+
+  li a:hover {
+    background-color: rgb(255, 128, 55);
+  }
+
+  li.header.active {
+    background-color: rgb(255, 128, 55);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .w3-container {
+    width: 1350px;
+   }
+
+
+  h1 {
+    background-color: black;
+    padding: 10px;
+    box-sizing: content-box;
+    width: 200px;
+    height: 50px;
+    margin-Left: 30px;
+    text-align: center;
+
+  }
+
+  h6 {
+    text-decoration-line: none;
+  }
+
+  a {
+    text-decoration-line: none;
+  }
+
+  p :hover,
+  a :hover {
+    text-decoration-line: underline;
+    text-decoration-color: yellow;
+    color: yellow;
+    cursor: pointer;
+  }
+
+  div.bloga {
+    word-wrap: break-word;
+    text-decoration-line: none;
+    width: 850px;
+    background-color: yellow;
+    padding: 30px;
+
+  }
+
+  div.blogb {
+    word-wrap: break-word;
+    text-decoration-line: none;
+    width: 250px;
+    background-color: yellow;
+    padding: 10px;
+  }
+
+  div.blogc {
+    word-wrap: break-word;
+
+    text-decoration-line: none;
+    width: 400px;
+    background-color: yellow;
+    padding: 5px 5px 5px 5px;
+  }
+
+
+  /* search box */
+  form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: black;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+
+  form.example button:hover {
+    background: yellow;
+    color: black;
+  }
+
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .div1 {
+    border: 0px solid;
+    padding: 5px;
+    margin-left: 1.5cm;
+  }
+
+  #div1:hover {
+    text-decoration-color: black;
+    color: black;
+  }
+
+  /* pop up recent project */
+  #myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  #myImg:hover {
+    opacity: 0.7;
+  }
+
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: whitesmoke;
+    padding: 10px 0;
+    height: 150px;
+  }
+
+  /* Add Animation */
+  .modal-content,
+  #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+
+  @-webkit-keyframes zoom {
+    from {
+      -webkit-transform: scale(0)
+    }
+
+    to {
+      -webkit-transform: scale(1)
+    }
+  }
+
+  @keyframes zoom {
+    from {
+      transform: scale(0)
+    }
+
+    to {
+      transform: scale(1)
+    }
+  }
+
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px) {
+    .modal-content {
+      width: 100%;
+    }
+  }
+
+  /* slide */
+  * {
+    box-sizing: border-box;
+  }
+
+  img {
+    vertical-align: middle;
+  }
+
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+  }
+
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+    text-align: center;
+  }
+
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 20%;
+    width: auto;
+    padding: 16px;
+    margin-top: -10px;
+    color: yellow;
+    font-weight: bold;
+    font-size: 40px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgb(88, 79, 79);
+    -webkit-user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: white;
+    font-size: 20px;
+    font-style: bold;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: rgb(59, 56, 56);
+    padding: 2px 16px;
+    color: white;
+    font-size: 20px;
+    height: 1.5cm;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+</style>
+
+
+<body>
+  <div class="w3-display-container w3-white">
+
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt=""></a>
+      <br><br><br><br>
+    </div>
+
+    <ul class="header">
+      <li class="header"><a href="todos.html">TODOS</a></li>
+      <li class="header"><a href="contact1.html">CONTACT</a></li>
+      <li class="header"><a href="about.html">ABOUT US</a></li>
+      <li class="header"><a href="blog.html">BLOG</a></li>
+      <li class="header active"><a href="portofolio.html">PORTOFOLIO</a></li>
+      <li class="header"><a href="index.html">HOME</a></li>
+    </ul>
+
+  </div>
+
+  <div class="w3-container">
+    <h1 style="color:yellow"><b>PROJECT</b></h1><br>
+    <!-- </div> -->
+    <!-- BLOG KIRI -->
+    <div class="w3-container">
+      <div class="w3-cell-row">
+        <div class="w3-display-container w3-cell">
+          <div class="w3-container w3-white w3-cell w3-cell-top"><br>
+
+            <!-- slide -->
+            <div class="container" style="background-color: gray">
+              <div class="mySlides">
+                <div class="numbertext">1 / 12</div>
+                <img src="images/p1.jpg" style="width:50%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">2 / 12</div>
+                <img src="images/p2.jpg" style="width:50%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">3 / 12</div>
+                <img src="images/p3.jpg" style="width:50%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">4 / 12</div>
+                <img src="images/p4.jpg" style="width:50%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">5 / 12</div>
+                <img src="images/p5.jpg" style="width:50%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">6 / 12</div>
+                <img src="images/p6.jpg" style="width:50%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">7 / 12</div>
+                <img src="images/p7.jpg" style="width:50%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">8 / 12</div>
+                <img src="images/p8.jpg" style="width:50%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">9 / 12</div>
+                <img src="images/p9.jpg" style="width:50%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">10 / 12</div>
+                <img src="images/p10.jpg" style="width:50%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">11 / 12</div>
+                <img src="images/p8.jpg" style="width:50%">
+              </div>
+
+              <div class="mySlides">
+                <div class="numbertext">12 / 12</div>
+                <img src="images/p4.jpg" style="width:50%">
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">❮</a>
+              <a class="next" onclick="plusSlides(1)">❯</a>
+
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+
+              <div class="row">
+                <div class="column">
+                  <img class="demo cursor" src="images/p1.jpg" style="width:100%" onclick="currentSlide(1)"
+                    alt="Project 1">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/p2.jpg" style="width:100%" onclick="currentSlide(2)"
+                    alt="Project 2">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/p3.jpg" style="width:100%" onclick="currentSlide(3)"
+                    alt="Project 3">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/p4.jpg" style="width:100%" onclick="currentSlide(4)"
+                    alt="Project 4">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/p5.jpg" style="width:100%" onclick="currentSlide(5)"
+                    alt="Project 5">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/p6.jpg" style="width:100%" onclick="currentSlide(6)"
+                    alt="Project 6">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/p7.jpg" style="width:100%" onclick="currentSlide(7)"
+                    alt="Project 7">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/p8.jpg" style="width:100%" onclick="currentSlide(8)"
+                    alt="Project 8">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/p9.jpg" style="width:100%" onclick="currentSlide(9)"
+                    alt="Project 9">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/p10.jpg" style="width:100%" onclick="currentSlide(10)"
+                    alt="Project 10">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/p8.jpg" style="width:100%" onclick="currentSlide(11)"
+                    alt="Project 10">
+                </div>
+                <div class="column">
+                  <img class="demo cursor" src="images/p4.jpg" style="width:100%" onclick="currentSlide(12)"
+                    alt="Project 10">
+                </div>
+              </div>
+            </div>
+            <br>
+
+            <hr style="height:0.5px;border-width:0;color:gray;background-color:lightgray">
+            <br>
+            <a href="#" style="font-size:25px; color:yellow; background-color: black; text-align: center; padding: 5px; padding-bottom: 5px; box-sizing: content-box;
+              width: 220px; height: 30px; margin-Left: 0px; border-bottom: black 0px solid;
+              cursor: pointer;margin-right: 200px;">PROJECT DESCRIPTION</a>
+            <h6>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+              laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+              ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor
+              in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at
+              vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis
+              dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil
+              imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus
+              legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod
+              ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium
+              lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum
+              formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur
+              parum clari, fiant sollemnes in futurum.</h6>
+            <br>
+
+            <hr style="height:0.5px;border-width:0;color:gray;background-color:lightgray">
+            <br>
+            <a href="#" style="font-size:25px; color:yellow; background-color: black; text-align: center; padding: 5px; padding-bottom: 5px; box-sizing: content-box;
+            width: 220px; height: 30px; margin-Left: 0px; border-bottom: black 0px solid;
+            cursor: pointer;margin-right: 280px;">Recent Projects</a><br><br>
+
+            <!-- BLOG TENGAH -->
+            <div class="w3-display-container">
+              <div class="w3-container w3-white w3-cell w3-cell-top">
+                <img id="myImg" src="images/pic12.jpg" alt="Recent Projects" style="width:260px">
+              </div>
+              <div class="w3-container w3-white w3-cell w3-cell-top">
+                <img id="myImg" src="images/pic13.jpg" alt="Recent Projects" style="width:260px">
+              </div>
+              <div class="w3-container w3-white w3-cell w3-cell-top">
+                <img id="myImg" src="images/pic14.jpg" alt="Recent Projects" style="width:260px">
+              </div>
+              <!-- The Modal -->
+              <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img1">
+                <div id="caption"></div>
+              </div>
+            </div>
+            <br>
+            <hr style="height:0.5px;border-width:0;color:gray;background-color:lightgray">
+            <br><br><br><br><br><br>
+          </div>
+        </div>
+
+        <!-- BLOG KANAN -->
+        <!-- BLOG KANAN 1-->
+
+        <div class="w3-container w3-white w3-cell w3-cell-top"><br>
+          <!-- BLOG KANAN 2-->
+          <div class="blogc" style="background-color: rgb(75, 71, 71);">
+            <div style="background-color: rgb(75, 71, 71); color: white">
+              <div class="blogc"
+                style="width: 300px; word-wrap: break-word;text-decoration-line: none; background-color: rgb(75, 71, 71); padding: 10px;">
+                <h3 style="color: yellow; margin-left: 10px;">PROJECT DETAILS</h3>
+                <div class="w3-container w3-rgb(75, 71, 71) w3-cell w3-cell-top "
+                  style="font-size: 14px; padding: 0px 10px 10px 0px;"><br>
+                  <img src="images/arrow.png" style="margin-right: 5px; float: left;"><a href="#">LOREM IPSUM DOLOR SIT
+                    CONSECTETUER</a><br><br><br>
+                  <img src="images/arrow.png" style="margin-right: 5px; float: left;"><a href="#">LOREM IPSUM DOLOR SIT
+                    CONSECTETUER</a><br><br><br>
+                  <img src="images/arrow.png" style="margin-right: 5px; float: left;"><a href="#">LOREM IPSUM DOLOR SIT
+                    CONSECTETUER</a><br><br><br>
+                  <img src="images/arrow.png" style="margin-right: 5px; float: left;"><a href="#">LOREM IPSUM DOLOR SIT
+                    CONSECTETUER</a><br><br><br>
+                  <img src="images/arrow.png" style="margin-right: 5px; float: left;"><a href="#">LOREM IPSUM DOLOR SIT
+                    CONSECTETUER</a><br><br><br>
+                </div>
+              </div>
+            </div>
+          </div><br>
+
+          <!-- BLOG KANAN 4-->
+          <div class="blogc" style="background-color: rgb(75, 71, 71);">
+            <div style="background-color: rgb(75, 71, 71); color: white">
+              <div class="blogc"
+                style="width: 300px; word-wrap: break-word; text-decoration-line: none; background-color: rgb(75, 71, 71); padding: 10px;">
+                <h3 style="color: yellow; margin-left: 15px;">POPULAR POSTS</h3>
+                <div class="w3-container w3-rgb(75, 71, 71) w3-cell w3-cell-top" style="font-size: 13px;"><br>
+                  <img src="images/list-img.jpg" style="margin-right: 10px; float: left;"><a href="#">LOREM IPSUM
+                    DOLOR SIT AMET, CONSECTETUER</a>
+                  <br><br>
+                  <a href="#" style="margin-left: 120px;">Dec. 28, 2013</a><img src="images/heart.png" title="likes"
+                    alt>
+                  15<a href="blog.html"></a><br><br>
+                  <img src="images/list-img1.jpg" style="margin-right: 10px; float: left;"><a href="#">LOREM IPSUM
+                    DOLOR SIT AMET, CONSECTETUER</a><br><br>
+                  <a href="#" style="margin-left: 120px;">Dec. 28, 2013<img src="images/heart.png" title="likes">
+                    15</a><br><br>
+                  <img src="images/list-img2.jpg" style="margin-right: 10px; float: left;"><a href="#">LOREM IPSUM
+                    DOLOR SIT AMET, CONSECTETUER</a><br><br>
+                  <a href="#" style="margin-left: 120px;">Dec. 28, 2013<img src="images/heart.png" title="likes" alt>
+                    15</a><br><br>
+                  <img src="images/list-img4.jpg" style="margin-right: 10px; float: left;"><a href="#">LOREM IPSUM
+                    DOLOR SIT AMET, CONSECTETUER</a><br><br>
+                  <a href="#" style="margin-left: 120px;">Dec. 28, 2013<img src="images/heart.png" title="likes" alt>
+                    15</a><br><br>
+                  <img src="images/list-img5.jpg" style="margin-right: 10px; float: left;"><a href="#">LOREM IPSUM
+                    DOLOR SIT AMET, CONSECTETUER</a><br><br>
+                  <a href="#" style="margin-left: 120px;">Dec. 28, 2013<img src="images/heart.png" title="likes" alt>
+                    15</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+
+          <!-- BLOG KANAN 5-->
+          <div class="blogc" style="background-color: rgb(75, 71, 71);">
+            <div style="background-color: rgb(75, 71, 71); color: white">
+              <div class="blogc"
+                style="width: 300px; word-wrap: break-word; text-decoration-line: none; background-color: rgb(75, 71, 71); padding: 10px;">
+                <h3 style="color: yellow; margin-left: 15px;">TAGS</h3>
+                <div class="w3-container w3-rgb(75, 71, 71) w3-cell w3-cell-top"
+                  style=" font-size: 15px; color:black; line-height: 33px;">
+                  <a href="#" style="background-color: yellow; padding: 5px 5px; ">WEB DESIGN</a>
+                  <a href="#" style="background-color: yellow; padding: 5px 5px;">HTML5</a>
+                  <a href="#" style="background-color: yellow; padding: 5px 5px;">WORDPRESS</a>
+                  <a href="#" style="background-color: yellow; padding: 5px 5px;">LOGO</a>
+                  <a href="#" style="background-color: yellow; padding: 5px 5px;">WEB DESIGN</a>
+                  <a href="#" style="background-color: yellow; padding: 5px 5px;">WEB DESIGN</a>
+                  <a href="#" style="background-color: yellow; padding: 5px 5px;">WORDPRESS</a>
+                  <a href="#" style="background-color: yellow; padding: 5px 5px;">WEB DESIGN</a>
+                  <a href="#" style="background-color: yellow; padding: 5px 5px;">HTML5</a>
+                  <a href="#" style="background-color: yellow; padding: 5px 5px;">WORDPRESS</a>
+                  <a href="#" style="background-color: yellow; padding: 5px 5px;">LOGO</a>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+
+      <div class="w3-cell-row">
+        <div class="w3-container w3-dark-gray w3-cell w3-cell-top">
+          <h4 style="color:rgb(255, 255, 251)"><b>About Us</b></h4><br>
+          <p style="color:rgb(255, 255, 251)">Lorem ipsum dolor sit amet. consectetur adipisicing elit, sed do. eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitationullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <h4 style="color:rgb(250, 250, 246); background-color: black; padding: 5px; padding-left: 10px; box-sizing: content-box;
+            width: 110px; height: 30px; margin-Left: 1px; border-bottom: yellow 3px solid; font-family: Arial Narrow;
+            cursor: pointer;"><b>Learn more</b></h4><br>
+          <h4 style="color:rgb(255, 255, 251)"><b>Photo Stream</b></h4><br>
+          <img src="images/g1.jpg" width="60" height="30">
+          <img src="images/g2.jpg" width="60" height="30">
+          <img src="images/g3.jpg" width="60" height="30"><br>
+          <img src="images/g4.jpg" width="60" height="30">
+          <img src="images/g5.jpg" width="60" height="30">
+          <img src="images/g6.jpg" width="60" height="30">
+        </div>
+
+        <div class="w3-container w3-dark-grey w3-cell w3-cell-top">
+          <h4 style="color:rgb(255, 255, 251)"><b>Latest tweets</b></h4><br>
+          <img src="images/tw.png" width="40" height="40" style="float: left;">
+          <h7 style="color:white">Lorem ipsum <b style="color: yellow">consectetuer</b> adipiscing elit, seddia
+            <b style="color: yellow">web design</b></h7><br><br>
+          <img src="images/tw.png" width="40" height="40" style="float: left;">
+          <h7 style="color:white">Lorem ipsum <b style="color: yellow">consectetuer</b> adipiscing elit, seddia
+            <b style="color: yellow">web design</b></h7><br><br>
+          <img src="images/tw.png" width="40" height="40" style="float: left;">
+          <h7 style="color:white">Lorem ipsum dolor sit amet <b style="color: yellow">consectetuer</b> adipiscing
+            elit,sed diam nonummy nibh
+            <b style="color: yellow">web design</b></h7><br><br>
+          <img src="images/tw.png" width="40" height="40" style="float: left;">
+          <h7 style="color:white">Lorem ipsum dolor sit amet <b style="color: yellow">consectetuer</b> adipiscing
+            elit,sed diam nonummy nibh
+            <b style="color: yellow">web design</b></h7><br><br>
+          <img src="images/tw.png" width="40" height="40" style="float: left;">
+          <h7 style="color:white">Lorem ipsum <b style="color: yellow">consectetuer</b> adipiscing elit, seddia
+            <b style="color: yellow">web design</b></h7><br><br>
+          <img src="images/tw.png" width="40" height="40" style="float: left;">
+          <h7 style="color:white">Lorem ipsum <b style="color: yellow">consectetuer</b> adipiscing elit, seddia
+            <b style="color: yellow">web design</b></h7><br>
+
+          <h4 style="color:rgb(255, 255, 251)"><b>Social Connecting</b></h4><br>
+
+          <a class="custom" href="blog.html"><img src='images/f.png' onmouseover="this.src='images/fC.png';"
+              onmouseout="this.src='images/f.png';" />
+            <img src='images/g.png' onmouseover="this.src='images/gC.png';" onmouseout="this.src='images/g.png';" />
+            <img src='images/t.png' onmouseover="this.src='images/tC.png';" onmouseout="this.src='images/t.png';" />
+            <img src='images/i.png' onmouseover="this.src='images/iC.png';" onmouseout="this.src='images/i.png';" />
+            <img src='images/Utub BW.png' onmouseover="this.src='images/UtubC.png';"
+              onmouseout="this.src='images/Utub BW.png';" />
+            <img src='images/Blog BW.png' onmouseover="this.src='images/Blog C.png';"
+              onmouseout="this.src='images/Blog BW.png';" />
+            <img src='images/wifi BW.png' onmouseover="this.src='images/wifiC.png';"
+              onmouseout="this.src='images/wifi BW.png';" />
+            <img src='images/dunia BW.png' onmouseover="this.src='images/DuniaC.png';"
+              onmouseout="this.src='images/dunia BW.png';" />
+          </a>
+
+          <h4 style="color:rgb(250, 250, 246); background-color: none; box-sizing: content-box; width: 400px; height: 30px; margin-Left: 1px;
+            border-bottom: yellow 3px solid; cursor: pointer;"></h4><br><br>
+        </div>
+        <div class="w3-container w3-dark-grey w3-cell w3-cell-top">
+          <h4 style="color:rgb(255, 255, 251);"><b>Contact info</b></h4><br>
+          <img src="images/address.png" width="40" height="40" style="float: left;">
+          <h6 style="color:white; margin-left: 50px;">Lorem ipsum dolor sit amet,consectetuer adipiscing elit, sed
+            diam nonummy nibh web design</b></h6><br>
+          <img src="images/phone.png" width="40" height="40" style="float: left;">
+          <h6 style="color:white;  margin-left: 50px;">Phone : +1 800 258 2689</b></h6>
+          <h6 style="color:white;  margin-left: 110px;"> +1 800 258 2689</b></h6><br>
+          <img src="images/msg.png" width="40" height="40" style="float: left;">
+          <h6><a href="about.html" style="color:white; text-decoration: none; margin-left: 10px;">Email: <b style="color: yellow; cursor:
+                  pointer;">gsetyobudi@gmail.com</b> </a></h6><br>
+          <h4 style="color:rgb(255, 255, 251)"><b>Follow Us</b></h4>
+          <h7 style="color:white">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+            euismod</b></h7><br>
+          <img src="images/msg.png" width="40" height="40" style="float: right; margin-right: 10px ;">
+          <h6 style="background-color: none; box-sizing: content-box; width: 400px; height: 30px; margin-Left: 1px;
+            border-bottom: yellow 3px solid; cursor: pointer;"></h6>
+        </div>
+      </div>
+
+      <div class="w3-container w3-black w3-cell w3-cell-middle" style="width: 700px; height:70px;">
+        <p> © 2020 <a href="index.html" style="color:yellow; text-decoration: none; margin-top: 25px;">HACKTIV8
+            WORKSHOP
+            FINAL PROJECTS</a></p>
+      </div>
+      <div class="w3-container w3-black w3-cell w3-cell-middle" style="width: 700px; height: 70px;">
+        <p style="text-align: right; margin-right: 30px;">
+          <a href="index.html" style="text-decoration: none; margin-left: 0.5cm;">HOME</a>
+          <a href="portofolio.html" style="text-decoration: none;  margin-left: 0.5cm;">PORTOFOLIO</a>
+          <a href="blog.html" style="text-decoration: none;  margin-left: 0.5cm;">BLOG</a>
+          <a href="about.html" style="text-decoration: none; margin-left: 0.5cm;">ABOUT US</a>
+          <a href="contact1.html" style="text-decoration: none;  margin-left: 0.5cm;">CONTACT</a>
+          <a href="todos.html" style="text-decoration: none;  margin-left: 0.5cm;">TODOS</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <br>
+
+  <!-- slide -->
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+
+    // pop up recent project
+    var modal = document.getElementById("myModal");
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img1");
+    var captionText = document.getElementById("caption");
+    img.onclick = function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+  </script>
+
+</body>
+
+</html>

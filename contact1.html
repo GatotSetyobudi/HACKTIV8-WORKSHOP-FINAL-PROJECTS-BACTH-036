@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HACKTIV8 WORKSHOP FINAL PROJECTS BACTH 036</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px;
+    background-color: white;
+    background-image: url("images/banner.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0px;
+    margin-right: 10px;
+    background-attachment: fixed;
+  }
+
+  ul.header {
+    list-style-type: none;
+    font-size: large;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding-bottom: 0.5cm;
+  }
+
+  li.header {
+    float: right;
+    margin-left: 0.5cm;
+  }
+
+  li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 45px 40px;
+    text-decoration: none;
+  }
+
+
+  .logo {
+    float: left;
+    margin-top: 0.5cm;
+    background-color: white;
+  }
+
+  li a:hover {
+    background-color: rgb(255, 128, 55);
+  }
+
+  li.header.active {
+    background-color: rgb(255, 128, 55);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .container {
+    width: relative;
+
+  }
+
+  h1 {
+    background-color: black;
+    padding: 10px;
+    box-sizing: content-box;
+    width: 200px;
+    height: 50px;
+    margin-Left: 30px;
+    text-align: center;
+  }
+
+
+  p :hover,
+  a :hover {
+    text-decoration-line: underline;
+    text-decoration-color: yellow;
+    color: rgb(31, 165, 243);
+    cursor: pointer;
+  }
+</style>
+
+
+<body>
+  <div class="w3-display-container w3-white">
+
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt=""></a>
+      <br><br><br><br>
+    </div>
+
+    <ul class="header">
+      <li class="header"><a href="todos.html">TODOS</a></li>
+      <li class="header active"><a href="contact.html">CONTACT</a></li>
+      <li class="header"><a href="about.html">ABOUT US</a></li>
+      <li class="header"><a href="blog.html">BLOG</a></li>
+      <li class="header"><a href="portofolio.html">PORTOFOLIO</a></li>
+      <li class="header"><a href="index.html">HOME</a></li>
+      <br>
+    </ul>
+  </div>
+
+  <div class="w3-container">
+    <h1 style="color:yellow"><b>CONTACT</b></h1><br>
+  </div>
+
+  <!-- <body> -->
+  <div class="w3-cell-row">
+    <div class="w3-container w3-dark-gray w3-cell w3-cell-top" style="width: 100%;">
+      <br>
+      <div id="googleMap" style="width:100%;height:600px;"></div>
+
+      <script>
+        function myMap() {
+          var mapProp = {
+            center: new google.maps.LatLng(-7.319563, 108.202972),
+            zoom: 13,
+          };
+          var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+        }
+      </script>
+
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8BVe5UqAJPGCehX4ujPn6sFw_ALZCFqA&callback=myMap">
+      </script>
+      <script type="text/javascript">
+        function initMap() {
+          var map = new google.maps.Map(document.getElementById('show_maps'), {
+            center: {
+              lat: -7.319563,
+              lng: 108.202972
+            },
+            zoom: 13
+          });
+        }
+      </script>
+      <br>
+    </div>
+  </div>
+
+  <body>
+    <div id="show_maps" style="width:100%;height:150%;"></div>
+  </body>
+
+  <div class="w3-cell-row">
+    <div class="w3-container w3-dark-gray w3-cell w3-cell-top" style="width: 700px;">
+      <form action="/action_page.php" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin">
+        <h2 class="w3-center">SEND US A MESSAGE</h2>
+
+        <div class="w3-row w3-section">
+          <div class="w3-col" style="width:100px"><i class="w3-xxlarge fa fa-user"></i></div>
+          <div class="w3-rest">
+            <input class="w3-input w3-border" name="first" type="text" placeholder="First Name">
+          </div>
+        </div>
+
+        <div class="w3-row w3-section">
+          <div class="w3-col" style="width:100px"><i class="w3-xxlarge fa fa-user"></i></div>
+          <div class="w3-rest">
+            <input class="w3-input w3-border" name="last" type="text" placeholder="Last Name">
+          </div>
+        </div>
+
+        <div class="w3-row w3-section">
+          <div class="w3-col" style="width:100px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
+          <div class="w3-rest">
+            <input class="w3-input w3-border" name="email" type="text" placeholder="Email">
+          </div>
+        </div>
+
+        <div class="w3-row w3-section">
+          <div class="w3-col" style="width:100px"><i class="w3-xxlarge fa fa-phone"></i></div>
+          <div class="w3-rest">
+            <input class="w3-input w3-border" name="phone" type="text" placeholder="Phone">
+          </div>
+        </div>
+
+        <div class="w3-row w3-section">
+          <div class="w3-col" style="width:100px"><i class="w3-xxlarge fa fa-pencil"></i></div>
+          <div class="w3-rest">
+            <textarea class="w3-input w3-border" name="message" type="text" placeholder="Message"
+              style="height:100px;justify-self: start;"></textarea>
+          </div>
+        </div>
+
+        <button style="cursor: pointer;" class="w3-button w3-block w3-section w3-blue w3-ripple w3-padding">
+          <a href="contact.html" style="text-decoration: none">Send a Message</a></button>
+      </form>
+    </div>
+
+
+    <div class="w3-container w3-dark-gray w3-cell w3-cell-top">
+      <h4 style="color: rgb(31, 165, 243);"><b>Contact info</b></h4><br>
+      <img src="images/address.png" width="40" height="40" style="float: left;">
+      <h6 style="color:white; margin-left: 50px;">Lorem ipsum dolor sit amet,consectetuer adipiscing elit, sed diam
+        nonummy nibh
+        web design</b></h6><br>
+      <img src="images/phone.png" width="40" height="40" style="float: left;">
+      <h6 style="color:white;  margin-left: 50px;">Phone : +1 800 258 2689</b></h6>
+      <h6 style="color:white;  margin-left: 110px;"> +1 800 258 2689</b></h6><br>
+      <img src="images/msg.png" width="40" height="40" style="float: left;">
+      <h6><a href="about.html" style="color:white; text-decoration: none; margin-left: 10px;">Email: <b style="color: rgb(31, 165, 243); cursor:
+          pointer; background-color: black;">gsetyobudi@gmail.com</b> </a></h6><br>
+    </div>
+  </div>
+
+
+  <div class="w3-cell-row">
+    <div class="w3-container w3-dark-gray w3-cell w3-cell-top">
+      <h4 style="color:rgb(31, 165, 243)"><b>About Us</b></h4><br>
+      <p style="color:rgb(255, 255, 251)">Lorem ipsum dolor sit amet. consectetur adipisicing elit, sed do. eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur.</p>
+      <h4 style="color:rgb(250, 250, 246); background-color: black; padding: 5px; padding-left: 10px; box-sizing: content-box;
+    width: 110px; height: 30px; margin-Left: 1px; border-bottom: rgb(31, 165, 243) 3px solid; font-family: Arial Narrow;
+    cursor: pointer;"><b>Learn more</b></h4><br>
+      <h4 style="color:rgb(31, 165, 243)"><b>Photo Stream</b></h4><br>
+      <img src="images/g1.jpg" width="130" height="70">
+      <img src="images/g2.jpg" width="130" height="70">
+      <img src="images/g3.jpg" width="130" height="70"><br>
+      <img src="images/g4.jpg" width="130" height="70">
+      <img src="images/g5.jpg" width="130" height="70">
+      <img src="images/g6.jpg" width="130" height="70">
+    </div>
+
+    <div class="w3-container w3-dark-grey w3-cell w3-cell-top">
+      <h4 style="color:rgb(31, 165, 243)"><b>Latest tweets</b></h4><br>
+      <img src="images/tw.png" width="40" height="40" style="float: left;">
+      <h7 style="color:white">Lorem ipsum <b style="color: rgb(31, 165, 243)">consectetuer</b> adipiscing elit, seddia
+        <b style="color: rgb(31, 165, 243)">web design</b></h7><br>
+      <img src="images/tw.png" width="40" height="40" style="float: left;">
+      <h7 style="color:white">Lorem ipsum <b style="color: rgb(31, 165, 243)">consectetuer</b> adipiscing elit, seddia
+        <b style="color: rgb(31, 165, 243)">web design</b></h7><br>
+      <img src="images/tw.png" width="40" height="40" style="float: left;">
+      <h7 style="color:white">Lorem ipsum dolor sit amet <b style="color: rgb(31, 165, 243)">consectetuer</b> adipiscing
+        elit, sed diam nonummy nibh
+        <b style="color: yergb(31, 165, 243)llow">web design</b></h7><br>
+      <img src="images/tw.png" width="40" height="40" style="float: left;">
+      <h7 style="color:white">Lorem ipsum dolor sit amet <b style="color: rgb(31, 165, 243)">consectetuer</b> adipiscing
+        elit, sed diam nonummy nibh
+        <b style="color: rgb(31, 165, 243)">web design</b></h7><br>
+      <img src="images/tw.png" width="40" height="40" style="float: left;">
+      <h7 style="color:white">Lorem ipsum <b style="color: rgb(31, 165, 243)">consectetuer</b> adipiscing elit, seddia
+        <b style="color: rgb(31, 165, 243)">web design</b></h7><br>
+      <img src="images/tw.png" width="40" height="40" style="float: left;">
+      <h7 style="color:white">Lorem ipsum <b style="color: rgb(31, 165, 243)">consectetuer</b> adipiscing elit, seddia
+        <b style="color: rgb(31, 165, 243)">web design</b></h7><br>
+
+      <h4 style="color:rgb(31, 165, 243)"><b>Social Connecting</b></h4><br>
+
+      <a class="custom" href="contact.html"><img src='images/f.png' onmouseover="this.src='images/fC.png';"
+          onmouseout="this.src='images/f.png';" />
+        <img src='images/g.png' onmouseover="this.src='images/gC.png';" onmouseout="this.src='images/g.png';" />
+        <img src='images/t.png' onmouseover="this.src='images/tC.png';" onmouseout="this.src='images/t.png';" />
+        <img src='images/i.png' onmouseover="this.src='images/iC.png';" onmouseout="this.src='images/i.png';" />
+        <img src='images/Utub BW.png' onmouseover="this.src='images/UtubC.png';"
+          onmouseout="this.src='images/Utub BW.png';" />
+        <img src='images/Blog BW.png' onmouseover="this.src='images/Blog C.png';"
+          onmouseout="this.src='images/Blog BW.png';" />
+        <img src='images/wifi BW.png' onmouseover="this.src='images/wifiC.png';"
+          onmouseout="this.src='images/wifi BW.png';" />
+        <img src='images/dunia BW.png' onmouseover="this.src='images/DuniaC.png';"
+          onmouseout="this.src='images/dunia BW.png';" />
+      </a>
+      <h4 style="color:rgb(250, 250, 246); background-color: none; box-sizing: content-box; width: 400px; height: 30px; margin-Left: 1px;
+    border-bottom: rgb(31, 165, 243) 3px solid; cursor: pointer;"></h4><br><br>
+    </div>
+
+    <div class="w3-container w3-dark-grey w3-cell w3-cell-top">
+      <h4 style="color:rgb(31, 165, 243);"><b>Contact info</b></h4><br>
+      <img src="images/address.png" width="40" height="40" style="float: left;">
+      <h6 style="color:white; margin-left: 50px;">Lorem ipsum dolor sit amet,consectetuer adipiscing elit, sed diam
+        nonummy nibh web design</b></h6><br>
+      <img src="images/phone.png" width="40" height="40" style="float: left;">
+      <h6 style="color:white;  margin-left: 50px;">Phone : +1 800 258 2689</b></h6>
+      <h6 style="color:white;  margin-left: 110px;"> +1 800 258 2689</b></h6><br>
+      <img src="images/msg.png" width="40" height="40" style="float: left;">
+      <h6><a href="about.html" style="color:white; text-decoration: none; margin-left: 10px;">Email: <b
+            style="color: rgb(31, 165, 243);">gsetyobudi@gmail.com</b> </a></h6><br>
+
+      <h4 style="color:rgb(31, 165, 243)"><b>Follow Us</b></h4>
+      <h7 style="color:white">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+        euismod</b></h7><br>
+      <img src="images/msg.png" width="40" height="40" style="float: right;">
+      <h6 style="background-color: none; box-sizing: content-box; width: 450px; height: 30px; margin-Left: 1px;
+    border-bottom: rgb(31, 165, 243) 3px solid; cursor: pointer;"></h6>
+    </div>
+  </div>
+
+  <div class="w3-container w3-black w3-cell w3-cell-middle" style="width: 1000px; height:70px;">
+    <p> © 2020 <a href="index.html" style="color:rgb(31, 165, 243); text-decoration: none; margin-top: 25px;">HACKTIV8
+        WORKSHOP FINAL PROJECTS</a>
+  </div>
+  <div class="w3-container w3-black w3-cell w3-cell-middle" style="width: 1000px; height: 70px;">
+    <p style="text-align: right; margin-right: 30px;">
+      <a href="index.html" style="text-decoration: none; margin-left: 0.5cm;">HOME</a>
+      <a href="portofolio.html" style="text-decoration: none;  margin-left: 0.5cm;">PORTOFOLIO</a>
+      <a href="blog.html" style="text-decoration: none;  margin-left: 0.5cm;">BLOG</a>
+      <a href="about.html" style="text-decoration: none; margin-left: 0.5cm;">ABOUT US</a>
+      <a href="contact.html" style="text-decoration: none;  margin-left: 0.5cm;">CONTACT</a>
+      <a href="todos.html" style="text-decoration: none;  margin-left: 0.5cm;">TODOS</a>
+    </p>
+    </p>
+  </div>
+  </div>
+
+  <!-- <script src="script.js"></script> -->
+</body>
+
+</html>

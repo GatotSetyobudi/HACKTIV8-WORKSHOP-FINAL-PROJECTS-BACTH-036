@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HACKTIV8 WORKSHOP FINAL PROJECTS BACTH 036</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0px;
+      background-color: #f3e1bb;
+      /* background-image: url("images/banner.jpg"); */
+      background-size: auto;
+      background-repeat: no-repeat;
+      background-position: 0px;
+      margin-right: 0px;
+      background-attachment: fixed;
+    }
+
+
+
+    p :hover,
+    a :hover {
+      text-decoration-line: underline;
+      color: yellow;
+      cursor: pointer;
+    }
+
+
+
+    /* Style the list items */
+    ol li {
+      cursor: pointer;
+      position: left;
+      padding: 12px 2px 12px 40px;
+      list-style-type: none;
+      background-color: antiquewhite;
+      font-size: 18px;
+      transition: 0.2s;
+
+      /* make the list items unselectable */
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    /* Set all odd list items to a different color (zebra-stripes) */
+    ol li:nth-child(odd) {
+      background: #f9f9f9;
+    }
+
+    /* Darker background-color on hover */
+    ol li:hover {
+      background: #ddd;
+    }
+
+    /* When clicked on, add a background color and strike out text */
+    ol li.checked {
+      background: #888;
+      color: #fff;
+      text-decoration: line-through;
+    }
+
+    /* Add a "checked" mark when clicked on */
+    ol li.checked::before {
+      content: '';
+      position: absolute;
+      border-color: yellow;
+      border-style: solid;
+      border-width: 0 3px 3px 0;
+      left: 50px;
+      transform: rotate(45deg);
+      height: 20px;
+      width: 10px;
+    }
+
+
+    /* Style the header */
+    #header {
+
+      padding: 30px 20px;
+      color: black;
+      text-align: center;
+    }
+
+
+
+    /* Style the input */
+    #inputTugas {
+      margin: 0;
+      border: none;
+      border-radius: 0;
+      width: 350px;
+      padding: 10px;
+      float: none;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    /* Style the "X" button */
+    .tombol {
+      border: none;
+      padding: 0px 0px;
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: red;
+      color: black;
+      width: 20px;
+      height: 20px;
+      font-size: 15px;
+      float: right;
+      margin-right: 10px;
+    }
+
+    .tombol:hover {
+      background-color: rgb(109, 253, 52);
+      color: white
+    }
+
+    /* style " Add " button */
+    button {
+      border: none;
+      padding: 0px 2px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    #tombol {
+      border: none;
+      padding: 0px 2px;
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: red;
+      color: white;
+      width: 45px;
+      height: 40px;
+
+      margin-left: 10px;
+    }
+
+    #tombol:hover {
+      background-color: rgb(109, 253, 52);
+      color: black
+    }
+
+    #daftarTugas {
+      font-size: 20px;
+      margin-left: -1cm;
+    }
+
+    .blinking {
+      animation: blinkingText 1.6s infinite;
+    }
+
+    @keyframes blinkingText {
+      0% {
+        color: #000;
+      }
+
+      10% {
+        color: rgb(49, 48, 48);
+      }
+
+      20% {
+        color: rgb(105, 103, 103);
+      }
+
+      30% {
+        color: rgb(138, 134, 134);
+      }
+
+      40% {
+        color: rgb(214, 210, 210);
+      }
+
+      50% {
+        color: transparent;
+      }
+
+      60% {
+        color: transparent;
+      }
+
+      70% {
+        color: gb(214, 210, 210);
+      }
+
+      80% {
+        color: rgb(138, 134, 134);
+      }
+
+      99% {
+        color: rgb(105, 103, 103);
+      }
+
+      100% {
+        color: rgb(49, 48, 48);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <div class="w3-container">
+    <div class="w3-cell-row">
+      <div class="w3-container w3-cell w3-cell-top" style="width: 500px">
+        <div id="header">
+          <h1><span class="blinking"><b>Todo App</b></span></h1><br>
+
+          <input type="text" id="inputTugas" placeholder="Add a Todo...">
+          <button type="button" id="tombol" title="tambah data tugas">Add</button>
+        </div>
+
+        <ol id="daftarTugas">
+          <li></li>
+          <li class="checked"></li>
+        </ol>
+
+      </div>
+      <div class="w3-container w3-dark-gray w3-cell w3-cell-top">
+        <div class="w3-cell-row">
+          <div class="w3-container w3-dark-gray w3-cell w3-cell-top">
+            <h4 style="color:rgb(255, 255, 251)"><b>About Us</b></h4><br>
+            <p style="color:rgb(255, 255, 251); font-size: small;">Lorem ipsum dolor sit amet. consectetur adipisicing
+              elit, sed do.
+              eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+              ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+              esse
+              cillum dolore eu fugiat nulla pariatur.</p>
+            <h4 style="color:rgb(250, 250, 246); background-color: black; padding: 5px; padding-left: 10px; box-sizing: content-box;
+          width: 110px; height: 30px; margin-Left: 1px; border-bottom: yellow 3px solid; font-family: Arial Narrow;
+          cursor: pointer;"><b>Learn more</b></h4><br>
+            <h4 style="color:rgb(255, 255, 251)"><b>Photo Stream</b></h4><br>
+            <img src="images/g1.jpg" width="90" height="40">
+            <img src="images/g2.jpg" width="90" height="40">
+            <img src="images/g3.jpg" width="90" height="40"><br>
+            <img src="images/g4.jpg" width="90" height="40">
+            <img src="images/g5.jpg" width="90" height="40">
+            <img src="images/g6.jpg" width="90" height="40">
+          </div>
+
+          <div class="w3-container w3-dark-grey w3-cell w3-cell-top">
+            <h4 style="color:rgb(255, 255, 251)"><b>Latest tweets</b></h4><br>
+            <di style="color: white; font-size: small;">
+              <img src="images/tw.png" width="40" height="40" style="float: left;">
+              Lorem ipsum <b style="color: yellow">consectetuer</b> adipiscing elit, seddia
+              <b style="color: yellow">web design</b><br>
+              <img src="images/tw.png" width="40" height="40" style="float: left;">
+              Lorem ipsum <b style="color: yellow">consectetuer</b> adipiscing elit, seddia
+              <b style="color: yellow">web design</b><br>
+              <img src="images/tw.png" width="40" height="40" style="float: left;">
+              Lorem ipsum dolor sit amet <b style="color: yellow">consectetuer</b> adipiscing
+              elit, sed diam nonummy nibh
+              <b style="color: yellow">web design</b><br>
+              <img src="images/tw.png" width="40" height="40" style="float: left;">
+              Lorem ipsum dolor sit amet <b style="color: yellow">consectetuer</b> adipiscing
+              elit, sed diam nonummy nibh
+              <b style="color: yellow">web design</b><br>
+              <img src="images/tw.png" width="40" height="40" style="float: left;">
+              Lorem ipsum <b style="color: yellow">consectetuer</b> adipiscing elit, seddia
+              <b style="color: yellow">web design</b><br>
+              <img src="images/tw.png" width="40" height="40" style="float: left;">
+              Lorem ipsum <b style="color: yellow">consectetuer</b> adipiscing elit, seddia
+              <b style="color: yellow">web design</b><br>
+            </di>
+            <h4 style="color:rgb(255, 255, 251)"><b>Social Connecting</b></h4><br>
+
+            <a class="custom" href="todos.html"><img src='images/f.png' onmouseover="this.src='images/fC.png';"
+                onmouseout="this.src='images/f.png';" />
+              <img src='images/g.png' onmouseover="this.src='images/gC.png';" onmouseout="this.src='images/g.png';" />
+              <img src='images/t.png' onmouseover="this.src='images/tC.png';" onmouseout="this.src='images/t.png';" />
+              <img src='images/i.png' onmouseover="this.src='images/iC.png';"
+                onmouseout="this.src='images/i.png';" /><br><br>
+              <img src='images/Utub BW.png' onmouseover="this.src='images/UtubC.png';"
+                onmouseout="this.src='images/Utub BW.png';" />
+              <img src='images/Blog BW.png' onmouseover="this.src='images/Blog C.png';"
+                onmouseout="this.src='images/Blog BW.png';" />
+              <img src='images/wifi BW.png' onmouseover="this.src='images/wifiC.png';"
+                onmouseout="this.src='images/wifi BW.png';" />
+              <img src='images/dunia BW.png' onmouseover="this.src='images/DuniaC.png';"
+                onmouseout="this.src='images/dunia BW.png';" />
+
+            </a>
+            <h4 style="color:rgb(250, 250, 246); background-color: none; box-sizing: content-box; width: 200px; height: 30px; margin-Left: 1px;
+          border-bottom: yellow 3px solid; cursor: pointer;"></h4><br>
+          </div>
+
+          <div class="w3-container w3-dark-grey w3-cell w3-cell-top">
+            <h4 style="color:rgb(255, 255, 251);"><b>Contact info</b></h4><br>
+            <img src="images/address.png" width="40" height="40" style="float: left;">
+            <div style="color:white; margin-left: 50px; font-size: small;">Lorem ipsum dolor sit amet,consectetuer
+              adipiscing elit, sed
+              diam onummy nibh web design</b></div><br>
+            <img src="images/phone.png" width="40" height="40" style="float: left;">
+            <div style="font-size: small;">
+              <h7 style="color:white;  margin-left: 10px;">Phone : +1 800 258 2689</h7>
+              <h7 style="color:white;  margin-left: 60px;"> +1 800 258 2689</h7>
+            </div><br>
+            <img src="images/msg.png" width="40" height="40" style="float: left;">
+            <h6><a href="about.html" style="color:white; text-decoration: none; margin-left: 10px;">Email: <b style="color: yellow; cursor:
+                pointer;">gsetyobudi@gmail.com</b> </a></h6><br>
+
+            <h4 style="color:rgb(255, 255, 251)"><b>Follow Us</b></h4>
+            <h7 style="color:white; font-size: small;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+              diam nonummy nibh
+              euismod</b></h7><br>
+            <img src="images/msg.png" width="40" height="40" style="float: right;">
+            <h6 style="background-color: none; box-sizing: content-box; width: 200px; height: 30px; margin-Left: 1px;
+          border-bottom: yellow 3px solid; cursor: pointer;"></h6>
+          </div>
+        </div>
+
+        <div class="w3-container w3-black w3-cell w3-cell-middle" style="width: 500px; height:70px;">
+          <p> © 2020 <a href="index.html" style="color:yellow; text-decoration: none; margin-top: 25px;">HACKTIV8
+              WORKSHOP
+              FINAL PROJECTS</a></p>
+        </div>
+        <div class="w3-container w3-black w3-cell w3-cell-middle" style="width: 500px; height: 70px;">
+          <p style="text-align: right; margin-right: 0px; font-size: small;">
+            <a href="index.html" style="text-decoration: none; margin-left: 0.5cm;">HOME</a>
+            <a href="portofolio.html" style="text-decoration: none;  margin-left: 0.5cm;">PORTOFOLIO</a>
+            <a href="blog.html" style="text-decoration: none;  margin-left: 0.5cm;">BLOG</a>
+            <a href="about.html" style="text-decoration: none; margin-left: 0.5cm;">ABOUT US</a>
+            <a href="contact1.html" style="text-decoration: none;  margin-left: 0.5cm;">CONTACT</a>
+            <a href="todos.html" style="text-decoration: none;  margin-left: 0.5cm;">TODOS</a>
+          </p>
+          <!-- </p> -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <script src="script1.js"></script>
+</body>
+
+</html>

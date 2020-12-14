@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HACKTIV8 WORKSHOP FINAL PROJECTS BACTH 036</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px;
+    background-color: white;
+    background-image: url("images/banner.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0px;
+    margin-right: 10px;
+    background-attachment: fixed;
+  }
+
+
+  ul.header {
+    list-style-type: none;
+    font-size: large;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding-bottom: 0.5cm;
+  }
+
+  li.header {
+    float: right;
+    margin-left: 0.5cm;
+  }
+
+  li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 45px 40px;
+    text-decoration: none;
+  }
+
+  .logo {
+    float: left;
+    margin-top: 0.5cm;
+    background-color: white;
+  }
+
+  li a:hover {
+    background-color: rgb(255, 128, 55);
+  }
+
+  li.header.active {
+    background-color: rgb(255, 128, 55);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .container {
+    width: relative;
+    /* background-color: rgb(94, 87, 87); */
+  }
+
+
+  h1 {
+    background-color: black;
+    padding: 10px;
+    box-sizing: content-box;
+    width: 150px;
+    height: 50px;
+    margin-Left: 30px;
+    text-align: center;
+
+  }
+
+  h6 {
+    text-decoration-line: none;
+  }
+
+  a {
+    text-decoration-line: none;
+  }
+
+  p :hover,
+  a :hover {
+    text-decoration-line: underline;
+    text-decoration-color: yellow;
+    color: yellow;
+    cursor: pointer;
+  }
+
+  div.bloga {
+    word-wrap: break-word;
+    text-decoration-line: none;
+    width: 410px;
+    background-color: yellow;
+    padding: 30px;
+
+  }
+
+
+  /* search box */
+  form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: black;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+  }
+
+  form.example button:hover {
+    background: yellow;
+    color: black;
+  }
+
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /* rolling halaman */
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: .3s;
+    text-align: center;
+  }
+
+  .pagination a.active {
+    background-color: yellow;
+    color: black;
+  }
+
+  .pagination a:hover:not(.active) {
+    background-color: yellow;
+  }
+
+  
+</style>
+
+
+<body>
+  <div class="w3-display-container w3-white">
+    
+    <div class="logo">
+      <a href="index.html"><img src="images/logo.png" alt=""></a>
+      <br><br><br><br>
+    </div>
+
+    <ul class="header">
+      <li class="header"><a href="todos.html">TODOS</a></li>
+      <li class="header"><a href="contact1.html">CONTACT</a></li>
+      <li class="header"><a href="about.html">ABOUT US</a></li>
+      <li class="header active"><a href="blog.html">BLOG</a></li>
+      <li class="header"><a href="portofolio.html">PORTOFOLIO</a></li>
+      <li class="header"><a href="index.html">HOME</a></li>
+    </ul>
+    
+  </div>
+  
+  <div class="w3-container">
+    <h1 style="color:yellow"><b>BLOG</b></h1><br>
+  </div>
+  <!-- BLOG KIRI -->
+  <div class="w3-container">
+    <div class="w3-container w3-white w3-cell w3-cell-top"><br>
+      <div class="bloga">
+        <h4><i>Lorem ipsum dolor sit consectetuer adipiscing elit, sed diam"</i></h4>
+        <span>
+          <h6 style="text-align: right">adipiscing</h6>
+        </span>
+      </div><br>
+
+      <a href="blog1.html"><img src="images/blog-img1.jpg" style="width: 410px;"></a>
+      <div class="bloga">
+        <a href="blog.html">
+          <h5>HENDRERIT IN VULPUTATE VELIT ESSE MOLESTIE CONSEQUAT</h5>
+        </a>
+        <h6>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+          sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</h6>
+        <a href="blog.html"><span><img src="images/b-heart.png" title="likes"> 15<a href="blog.html"></a>
+            <a href="#">by adipiscing</a> / <a href="#">6 comments</a> / <a href="#">Dec. 28, 2013</a>
+      </div><br>
+      <a href="blog1.html"><img src="images/blog-img2.jpg" style="width: 410px;"></a>
+      <div class="bloga">
+        <a href="blog.html">
+          <h5>HENDRERIT IN VULPUTATE VELIT ESSE MOLESTIE CONSEQUAT</h5>
+        </a>
+        <h6>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+          sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</h6>
+        <a href="blog.html"><span><img src="images/b-heart.png" title="likes" alt> 15<a href="blog.html"></a>
+            <a href="#">by adipiscing</a> / <a href="#">6 comments</a> / <a href="#">Dec. 28, 2013</a>
+      </div><br>
+      <a href="blog1.html"><img src="images/blog-img3.jpg" style="width: 410px;"></a>
+      <div class="bloga">
+        <a href="blog.html">
+          <h5>HENDRERIT IN VULPUTATE VELIT ESSE MOLESTIE CONSEQUAT</h5>
+        </a>
+        <h6>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+          sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</h6>
+        <a href="blog.html"><span><img src="images/b-heart.png" title="likes" alt> 15<a href="blog.html"></a>
+            <a href="#"> by adipiscing</a> / <a href="#">6 comments</a> / <a href="#">Dec. 28, 2013</a>
+      </div>
+    </div>
+
+    <!-- BLOG TENGAH -->
+    <div class="w3-container w3-white w3-cell w3-cell-top"><br>
+      <a href="blog1.html"><img src="images/blog-img4.jpg" style="width: 410px;"></a>
+      <div class="bloga">
+        <a href="blog.html">
+          <h5>HENDRERIT IN VULPUTATE VELIT
+            ESSE MOLESTIE CONSEQUAT</h5>
+        </a>
+        <h6>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+          sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</h6>
+        <a href="blog.html"><span><img src="images/b-heart.png" title="likes" alt> 15<a href="blog.html"></a>
+            <a href="#">by adipiscing</a> / <a href="#">6 comments</a> / <a href="#">Dec. 28, 2013</a>
+      </div><br>
+      <a href="blog1.html"><img src="images/blog-img5.jpg" style="width: 410px;"></a>
+      <div class="bloga">
+        <a href="blog.html">
+          <h5>HENDRERIT IN VULPUTATE VELIT
+            ESSE MOLESTIE CONSEQUAT</h5>
+        </a>
+        <h6>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+          sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</h6>
+        <a href="blog.html"><span><img src="images/b-heart.png" title="likes" alt> 15<a href="blog.html"></a>
+            <a href="#">by adipiscing</a> / <a href="#">6 comments</a> / <a href="#">Dec. 28, 2013</a>
+      </div>
+      <a href="blog1.html"><img src="images/blog-img6.jpg" style="width: 410px;"></a>
+      <div class="bloga">
+        <a href="blog.html">
+          <h5>HENDRERIT IN VULPUTATE VELIT
+            ESSE MOLESTIE CONSEQUAT</h5>
+        </a>
+        <h6>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+          sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</h6>
+        <a href="blog.html"><span><img src="images/b-heart.png" title="likes" alt> 15<a href="blog.html"></a>
+            <a href="#">by adipiscing</a> / <a href="#">6 comments</a> / <a href="#">Dec. 28, 2013</a>
+      </div>
+      <a href="blog1.html"><img src="images/blog-img7.jpg" style="width: 410px;"></a>
+      <div class="bloga">
+        <a href="blog.html">
+          <h5>HENDRERIT IN VULPUTATE VELIT
+            ESSE MOLESTIE CONSEQUAT</h5>
+        </a>
+        <h6>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+          sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</h6>
+        <a href="blog.html"><img src="images/b-heart.png" title="likes" alt> 15<a href="blog.html"></a>
+          <a href="#">by adipiscing</a> / <a href="#">6 comments</a> / <a href="#">Dec. 28, 2013</a>
+      </div><br>
+
+    </div>
+
+    <!-- BLOG KANAN -->
+    <!-- BLOG KANAN 1-->
+    <div class="w3-container w3-white w3-cell w3-cell-top"><br>
+      <div class="bloga" style="background-color: rgb(70, 66, 66);">
+        <form class="example" action="/action_page.php">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div><br>
+      </form>
+      <!-- BLOG KANAN 2-->
+      <div class="bloga" style="background-color: rgb(75, 71, 71);">
+        <div style="background-color: rgb(75, 71, 71); color: white">
+          <div class="bloga" style="width: 350px; word-wrap: break-word;
+          text-decoration-line: none; background-color: rgb(75, 71, 71); padding: 10px;">
+            <h5 style="color: yellow; margin-left: 15px;">CATEGORIES</h5>
+            <div class="w3-container w3-rgb(75, 71, 71) w3-cell w3-cell-top" style="font-size: 13px;"><br>
+              <img src="images/arrow.png" style="margin-right: 10px; float: left;"><a
+                href="#">LOREMIPSUM</a><br><br><br>
+              <img src="images/arrow.png" style="margin-right: 10px; float: left;"><a
+                href="#">LOREMIPSUM</a><br><br><br>
+              <img src="images/arrow.png" style="margin-right: 10px; float: left;"><a
+                href="#">LOREMIPSUM</a><br><br><br>
+              <img src="images/arrow.png" style="margin-right: 10px; float: left;"><a
+                href="#">LOREMIPSUM</a><br><br><br>
+              <img src="images/arrow.png" style="margin-right: 10px; float: left;"><a
+                href="#">LOREMIPSUM</a><br><br><br>
+            </div>
+            <div class="w3-container w3-rgb(75, 71, 71) w3-cell w3-cell-top" style="font-size: 13px;"><br>
+              <img src="images/arrow.png" style="margin-right: 10px; float: left;"><a
+                href="blog.html">LOREMIPSUM</a><br><br><br>
+              <img src="images/arrow.png" style="margin-right: 10px; float: left;"><a
+                href="#">LOREMIPSUM</a><br><br><br>
+              <img src="images/arrow.png" style="margin-right: 10px; float: left;"><a
+                href="#">LOREMIPSUM</a><br><br><br>
+              <img src="images/arrow.png" style="margin-right: 10px; float: left;"><a
+                href="#">LOREMIPSUM</a><br><br><br>
+              <img src="images/arrow.png" style="margin-right: 10px; float: left;"><a
+                href="#">LOREMIPSUM</a><br><br><br>
+            </div>
+          </div>
+        </div>
+      </div><br>
+      <!-- BLOG KANAN 3-->
+      <div class="bloga" style="background-color: rgb(75, 71, 71);">
+        <div style="background-color: rgb(75, 71, 71); color: white">
+          <div class="bloga" style="width: 350px; word-wrap: break-word;
+          text-decoration-line: none; background-color: rgb(75, 71, 71); padding: 10px;">
+            <h5 style="color: yellow; margin-left: 15px;">ARCHIVE</h5>
+            <div class="w3-container w3-rgb(75, 71, 71) w3-cell w3-cell-top" style="font-size: 13px;"><br>
+              <img src="images/arrow.png" style="margin-right: 10px; float: left;"><a href="#">JULY(15)</a><br><br><br>
+              <img src="images/arrow.png" style="margin-right: 10px; float: left;"><a href="#">OCT(20)</a><br><br><br>
+              <img src="images/arrow.png" style="margin-right: 10px; float: left;"><a href="#">NOV(8)</a><br><br><br>
+              <img src="images/arrow.png" style="margin-right: 10px; float: left;"><a href="#">DEC(25)</a><br><br><br>
+              <img src="images/arrow.png" style="margin-right: 10px; float: left;"><a href="#">AUGUST(9)</a><br><br><br>
+            </div>
+            <div class="w3-container w3-rgb(75, 71, 71) w3-cell w3-cell-top" style="font-size: 13px;"><br>
+              <img src="images/arrow.png" style="margin-right: 10px; float: left;"><a
+                href="blog.html">JULY(15)</a><br><br><br>
+              <img src="images/arrow.png" style="margin-right: 10px; float: left;"><a href="#">OCT(20)</a><br><br><br>
+              <img src="images/arrow.png" style="margin-right: 10px; float: left;"><a href="#">NOV(8)</a><br><br><br>
+              <img src="images/arrow.png" style="margin-right: 10px; float: left;"><a href="#">DEC(25)</a><br><br><br>
+              <img src="images/arrow.png" style="margin-right: 10px; float: left;"><a href="#">AUGUST(9)</a><br><br><br>
+            </div>
+          </div>
+        </div>
+      </div><br>
+      <!-- BLOG KANAN 4-->
+      <div class="bloga" style="background-color: rgb(75, 71, 71);">
+        <div style="background-color: rgb(75, 71, 71); color: white">
+          <div class="bloga" style="width: 350px; word-wrap: break-word;
+          text-decoration-line: none; background-color: rgb(75, 71, 71); padding: 10px;">
+            <h5 style="color: yellow; margin-left: 15px;">POPULAR POSTS</h5>
+            <div class="w3-container w3-rgb(75, 71, 71) w3-cell w3-cell-top" style="font-size: 13px;"><br>
+              <img src="images/list-img.jpg" style="margin-right: 10px; float: left;"><a href="#">LOREM IPSUM DOLOR SIT
+                AMET, CONSECTETUER</a>
+              <br><br>
+              <a href="#" style="margin-left: 35px;">Dec. 28, 2013</a><img src="images/heart.png" title="likes" alt>
+              15<a href="blog.html"></a><br><br>
+              <img src="images/list-img1.jpg" style="margin-right: 10px; float: left;"><a href="#">LOREM IPSUM DOLOR SIT
+                AMET, CONSECTETUER</a><br><br>
+              <a href="#" style="margin-left: 35px;">Dec. 28, 2013<img src="images/heart.png" title="likes">
+                15</a><br><br>
+
+              <img src="images/list-img2.jpg" style="margin-right: 10px; float: left;"><a href="#">LOREM IPSUM DOLOR SIT
+                AMET, CONSECTETUER</a><br><br>
+              <a href="#" style="margin-left: 35px;">Dec. 28, 2013<img src="images/heart.png" title="likes" alt>
+                15</a><br><br>
+
+              <img src="images/list-img4.jpg" style="margin-right: 10px; float: left;"><a href="#">LOREM IPSUM DOLOR SIT
+                AMET, CONSECTETUER</a><br><br>
+              <a href="#" style="margin-left: 35px;">Dec. 28, 2013<img src="images/heart.png" title="likes" alt>
+                15</a><br><br>
+
+              <img src="images/list-img5.jpg" style="margin-right: 10px; float: left;"><a href="#">LOREM IPSUM DOLOR SIT
+                AMET, CONSECTETUER</a><br><br>
+              <a href="#" style="margin-left: 35px;">Dec. 28, 2013<img src="images/heart.png" title="likes" alt> 15</a>
+              <br><br>
+
+            </div>
+
+          </div>
+        </div>
+      </div><br>
+
+      <!-- BLOG KANAN 5-->
+      <div class="bloga" style="background-color: rgb(75, 71, 71);">
+        <div style="background-color: rgb(75, 71, 71); color: white">
+          <div class="bloga" style="width: 350px; word-wrap: break-word;
+          text-decoration-line: none; background-color: rgb(75, 71, 71); padding: 10px;">
+            <h5 style="color: yellow; margin-left: 15px;">TAGS</h5>
+            <div class="w3-container w3-rgb(75, 71, 71) w3-cell w3-cell-top"
+              style=" font-size: 15px; color:black; line-height: 33px;">
+              <a href="#" style="background-color: yellow; padding: 5px 5px; ">WEB DESIGN</a>
+              <a href="#" style="background-color: yellow; padding: 5px 5px;">HTML5</a>
+              <a href="#" style="background-color: yellow; padding: 5px 5px;">WORDPRESS</a>
+              <a href="#" style="background-color: yellow; padding: 5px 5px;">LOGO</a>
+              <a href="#" style="background-color: yellow; padding: 5px 5px;">WEB DESIGN</a>
+              <a href="#" style="background-color: yellow; padding: 5px 5px;">WEB DESIGN</a>
+              <a href="#" style="background-color: yellow; padding: 5px 5px;">WORDPRESS</a>
+              <a href="#" style="background-color: yellow; padding: 5px 5px;">WEB DESIGN</a>
+              <a href="#" style="background-color: yellow; padding: 5px 5px;">HTML5</a>
+              <a href="#" style="background-color: yellow; padding: 5px 5px;">WORDPRESS</a>
+              <a href="#" style="background-color: yellow; padding: 5px 5px;">LOGO</a>
+              </a>
+            </div>
+
+          </div>
+        </div><br>
+
+
+
+      </div>
+
+    </div>
+    <div class="w3-container" style="background-color: white; width: 100%; font-size: 25px;">
+
+      <div class="pagination">
+        <a href="#" style="margin-left: 320px">PREVIOUS </a>
+        <a href="#">1</a>
+        <a class="active" href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">...</a>
+        <a href="#">19</a>
+        <a href="#">20</a>
+        <a href="#">NEXT</a>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="w3-cell-row">
+    <div class="w3-container w3-dark-gray w3-cell w3-cell-top">
+      <h4 style="color:rgb(255, 255, 251)"><b>About Us</b></h4><br>
+      <p style="color:rgb(255, 255, 251)">Lorem ipsum dolor sit amet. consectetur adipisicing elit, sed do. eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+        esse
+        cillum dolore eu fugiat nulla pariatur.</p>
+      <h4 style="color:rgb(250, 250, 246); background-color: black; padding: 5px; padding-left: 10px; box-sizing: content-box;
+      width: 110px; height: 30px; margin-Left: 1px; border-bottom: yellow 3px solid; font-family: Arial Narrow;
+      cursor: pointer;"><b>Learn more</b></h4><br>
+      <h4 style="color:rgb(255, 255, 251)"><b>Photo Stream</b></h4><br>
+      <img src="images/g1.jpg" width="120" height="60">
+      <img src="images/g2.jpg" width="120" height="60">
+      <img src="images/g3.jpg" width="120" height="60"><br>
+      <img src="images/g4.jpg" width="120" height="60">
+      <img src="images/g5.jpg" width="120" height="60">
+      <img src="images/g6.jpg" width="120" height="60">
+    </div>
+
+    <div class="w3-container w3-dark-grey w3-cell w3-cell-top">
+      <h4 style="color:rgb(255, 255, 251)"><b>Latest tweets</b></h4><br>
+      <img src="images/tw.png" width="40" height="40" style="float: left;">
+      <h7 style="color:white">Lorem ipsum <b style="color: yellow">consectetuer</b> adipiscing elit, seddia
+        <b style="color: yellow">web design</b></h7><br>
+      <img src="images/tw.png" width="40" height="40" style="float: left;">
+      <h7 style="color:white">Lorem ipsum <b style="color: yellow">consectetuer</b> adipiscing elit, seddia
+        <b style="color: yellow">web design</b></h7><br>
+      <img src="images/tw.png" width="40" height="40" style="float: left;">
+      <h7 style="color:white">Lorem ipsum dolor sit amet <b style="color: yellow">consectetuer</b> adipiscing elit,
+        sed diam nonummy nibh
+        <b style="color: yellow">web design</b></h7><br>
+      <img src="images/tw.png" width="40" height="40" style="float: left;">
+      <h7 style="color:white">Lorem ipsum dolor sit amet <b style="color: yellow">consectetuer</b> adipiscing elit,
+        sed diam nonummy nibh
+        <b style="color: yellow">web design</b></h7><br>
+      <img src="images/tw.png" width="40" height="40" style="float: left;">
+      <h7 style="color:white">Lorem ipsum <b style="color: yellow">consectetuer</b> adipiscing elit, seddia
+        <b style="color: yellow">web design</b></h7><br>
+      <img src="images/tw.png" width="40" height="40" style="float: left;">
+      <h7 style="color:white">Lorem ipsum <b style="color: yellow">consectetuer</b> adipiscing elit, seddia
+        <b style="color: yellow">web design</b></h7><br>
+
+      <h4 style="color:rgb(255, 255, 251)"><b>Social Connecting</b></h4><br>
+
+
+      <a class="custom" href="blog.html"><img src='images/f.png' onmouseover="this.src='images/fC.png';"
+          onmouseout="this.src='images/f.png';" />
+        <img src='images/g.png' onmouseover="this.src='images/gC.png';" onmouseout="this.src='images/g.png';" />
+        <img src='images/t.png' onmouseover="this.src='images/tC.png';" onmouseout="this.src='images/t.png';" />
+        <img src='images/i.png' onmouseover="this.src='images/iC.png';" onmouseout="this.src='images/i.png';" />
+        <img src='images/Utub BW.png' onmouseover="this.src='images/UtubC.png';"
+          onmouseout="this.src='images/Utub BW.png';" />
+        <img src='images/Blog BW.png' onmouseover="this.src='images/Blog C.png';"
+          onmouseout="this.src='images/Blog BW.png';" />
+        <img src='images/wifi BW.png' onmouseover="this.src='images/wifiC.png';"
+          onmouseout="this.src='images/wifi BW.png';" />
+        <img src='images/dunia BW.png' onmouseover="this.src='images/DuniaC.png';"
+          onmouseout="this.src='images/dunia BW.png';" />
+
+      </a>
+
+
+
+      <h4 style="color:rgb(250, 250, 246); background-color: none; box-sizing: content-box; width: 400px; height: 30px; margin-Left: 1px;
+      border-bottom: yellow 3px solid; cursor: pointer;"></h4><br>
+    </div>
+
+    <div class="w3-container w3-dark-grey w3-cell w3-cell-top">
+      <h4 style="color:rgb(255, 255, 251);"><b>Contact info</b></h4><br>
+      <img src="images/address.png" width="40" height="40" style="float: left;">
+      <h6 style="color:white; margin-left: 50px;">Lorem ipsum dolor sit amet,consectetuer adipiscing elit, sed diam
+        nonummy nibh
+        web design</b></h6><br>
+      <img src="images/phone.png" width="40" height="40" style="float: left;">
+      <h6 style="color:white;  margin-left: 50px;">Phone : +1 800 258 2689</b></h6>
+      <h6 style="color:white;  margin-left: 110px;"> +1 800 258 2689</b></h6><br>
+      <img src="images/msg.png" width="40" height="40" style="float: left;">
+      <h6><a href="about.html" style="color:white; text-decoration: none; margin-left: 10px;">Email: <b style="color: yellow; cursor:
+            pointer;">gsetyobudi@gmail.com</b> </a></h6><br>
+
+      <h4 style="color:rgb(255, 255, 251)"><b>Follow Us</b></h4>
+      <h7 style="color:white">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+        euismod</b></h7><br>
+      <img src="images/msg.png" width="40" height="40" style="float: right;">
+      <h6 style="background-color: none; box-sizing: content-box; width: 450px; height: 30px; margin-Left: 1px;
+      border-bottom: yellow 3px solid; cursor: pointer;"></h6>
+    </div>
+  </div>
+
+  <div class="w3-container w3-black w3-cell w3-cell-middle" style="width: 700px; height:70px;">
+    <p> © 2020 <a href="index.html" style="color:yellow; text-decoration: none; margin-top: 25px;">HACKTIV8 WORKSHOP
+        FINAL PROJECTS</a>
+  </div>
+  <div class="w3-container w3-black w3-cell w3-cell-middle" style="width: 700px; height: 70px;">
+    <p style="text-align: right; margin-right: 30px;">
+      <a href="index.html" style="text-decoration: none; margin-left: 0.5cm;">HOME</a>
+      <a href="portofolio.html" style="text-decoration: none;  margin-left: 0.5cm;">PORTOFOLIO</a>
+      <a href="blog.html" style="text-decoration: none;  margin-left: 0.5cm;">BLOG</a>
+      <a href="about.html" style="text-decoration: none; margin-left: 0.5cm;">ABOUT US</a>
+      <a href="contact1.html" style="text-decoration: none;  margin-left: 0.5cm;">CONTACT</a>
+      <a href="todos.html" style="text-decoration: none;  margin-left: 0.5cm;">TODOS</a>
+    </p>
+    </p>
+  </div>
+  </div>
+  <br>
+
+</body>
+
+</html>
